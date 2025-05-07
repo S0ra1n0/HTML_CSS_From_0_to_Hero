@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Các thẻ thông dụng
+    1. h1 -> h6: Heading
+    2. p: Paragraph
+    3. img: Image
+    4. a: Anchor (Link)
+    5. ul, li: Unordered List, List Item
+    6. table: Table
+    7. input: Text Input
+    8. button: Button
+    9. div: Division (Block Element)
+-->
+<html lang="en" lang="vi">
+  <html>
+    <!-- Phần đầu-->
+    <head>
+      <title>My First HTML Page</title>
+      <meta charset="UTF-8" />
+      <!-- Hỗ trợ Tiếng Việt-->
+    </head>
+    <!-- Phần thân-->
+    <!-- (Ctrl + /) để auto tạo comment-->
+    <body>
+      <h1>Hello</h1>
+
+      <p>How are you doing</p>
+
+      <img src="img1.jpeg" alt="Example Image" />
+
+      <!-- alt trong thẻ img giúp thay hình ảnh khi lỗi thành 1 dòng với icon ảnh + context trong alt-->
+      <a href="https://fullstack.edu.vn">Trang web học lập trình</a>
+
+      <ul>
+        <!-- li*n (n là 1 số tự nhiên > 0) giúp tạo nhiều list item mà không cần nhập thủ công-->
+        <!-- li*4 -> Tạo 4 list item [Nhập xong ấn nút "Tab"]-->
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>React</li>
+      </ul>
+
+      <table>
+        <!-- Gồm phần đầu và thân (thead and tbody) -->
+        <thead>
+          <!-- Thẻ <th> giúp tạo 1 cột của table -->
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Giới tính</th>
+        </thead>
+
+        <tbody>
+          <!-- Thẻ <tr> giúp tạo 1 hàng của table -->
+          <tr>
+            <!-- Thẻ <td> cho ta điền thông tin của đối tượng của hàng hiện tại-->
+            <!-- Giả sử có 3 <th> như trên, thì ta tạo 3 <td> cho mỗi <tr> ta tạo -->
+            <!-- Thứ tự các <td> tương ứng với thứ tự các <th> -->
+            <td>1</td>
+            <td>Alpha</td>
+            <td>Nam</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Beta</td>
+            <td>Nữ</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Charlie</td>
+            <td>Nam</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <input type="text" placeholder="Nhập tên của bạn" />
+      <br />
+      <!-- Thẻ <br> giúp ta xuống dòng -->
+      <input type="password" placeholder="Nhập mật khẩu của bạn" />
+      <br />
+      <input type="checkbox" />
+      <br />
+      <input type="radio" />
+      <input type="radio" />
+      <input type="radio" />
+      <br />
+      <!-- Nếu loại radio có cùng name, thì chỉ cho phép chọn 1 trong số đó -->
+      <input name="a" type="radio" />
+      <input name="a" type="radio" />
+      <input name="a" type="radio" />
+      <br />
+
+      <button>CLick for free MONEY!!!</button>
+
+      <div>
+        <!-- Thẻ <div> giúp tạo 1 khối (block) trong HTML -->
+        <h2>Đây là tiêu đề của khối</h2>
+        <p>Đây là nội dung của khối</p>
+      </div>
+    </body>
+  </html>
+</html>

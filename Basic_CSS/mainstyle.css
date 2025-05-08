@@ -1,0 +1,20 @@
+/* This is a comment in CSS */
+
+/* Với id, ta dùng "#" để gọi */
+#first_heading {
+  color: red;
+}
+
+/* Với class, ta dùng "." để gọi */
+.second_heading {
+  color: blue;
+}
+
+/*CSS selctor with class*/
+.heading.title {
+  color: green;
+}
+
+.box .heading {
+  color: rgba(193, 169, 28, 0.546);
+}

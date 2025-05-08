@@ -1,5 +1,166 @@
 /* This is a comment in CSS */
 
+/*So sánh độ ưu tiên trong CSS*/
+/* Với 3 loại CSS là Internal, External và Inline, loại nào được gọi mới nhất thì sẽ được ưu tiên hơn*/
+/* Sau đây là thứ tự từ Cao đến Thấp*/
+/* !Important: Vô đối */
+/* Inline */
+/* Id */
+/* Class */
+/* Tag */
+/* Universal + Inherited */
+/* "*", các thẻ con sẽ được kế thừa từ cha, 2 loại này có độ ưu tiên là 0*/
+/* Nếu gọi 2 theo loại bằng nhau (2 id như nhau, 2 class như nhau), thì loại nào được gọi mới nhất sẽ được ưu tiên hơn*/
+/* Có thể cộng dồn độ ưu tiên của các loại CSS với nhau*/
+/* Ví dụ: nếu có 1 id và 1 class, thì độ ưu tiên sẽ là 2*/
+/* gọi h1#heading.title, thì độ ưu tiên sẽ là 3*/
+
+/* CSS Units */
+/* 1. Absolute units */
+/* px, pt, in, cm, mm, pc */
+/* 2. Relative units */
+/* %, em, rem, ex, ch, vw, vh, vmin, vmax */
+/* %: phụ thuộc vào kích thước của thẻ cha, nếu thẻ cha không có thay đổi, thì sẽ lấy theo kích thước trang/trình duyệt/windowwindow */
+/* font-size khi để 100%, thì sẽ có 1 giá trị mặc định là 16px */
+/* em: phụ thuộc vào kích thước của font chữ trong thẻ cha*/
+/* rem: phụ thuộc vào kích thước của font chữ trong thẻ html */
+/* vh, vw: phụ thuộc vào kích thước của trình duyệt */
+/* Ví dụ: 1vh = 1% chiều cao của trình duyệt */
+/* Link chuyển đổi px sang % */
+/* https://nekocalc.com/px-to-rem-converter */
+
+/* Margin */
+/* Khoảng cách bên ngoài của thẻ */
+/* Margin có thể âm hoặc dương */
+/* Margin có thể tự động căn giữa thẻ, nếu thẻ cha có chiều rộng cố định */
+/* Giả sử 1 có 1 thẻ có thuộc tính width là 100%, nhưng lại nằm trong thẻ cha là <body>, <body> có margin mặc định là 8px */
+/* thì thẻ đó sẽ có chiều rộng là 100% - 8px - 8px = 100% - 16px*/
+/* Margin-top, margin-bottom, margin-left, margin-right */
+/* Margin: auto; sẽ tự động căn giữa thẻ */
+/* Margin: 0 auto; sẽ tự động căn giữa thẻ theo chiều ngang */
+/* Margin: 10px auto; sẽ tự động căn giữa thẻ theo chiều ngang, và có khoảng cách 10px ở trên và dưới */
+/* Margin: 10px; sẽ mở rộng ra 10px ở cả 4 hướng trong thẻ */
+/* Margin: 10px 20px; sẽ mở rộng ra 10px ở trên và dưới, 20px ở trái và phải */
+/* Margin: 10px 20px 30px; sẽ mở rộng ra 10px ở trên, 20px ở trái và phải, 30px ở dưới */
+/* Margin: 10px 20px 30px 40px; sẽ mở rộng ra 10px ở trên, 20px ở phải, 30px ở dưới, 40px ở trái */
+/* CHÚ Ý: Nếu margin vượt quá kích thước trình duyệt, thì sẽ bị đẩy xuống dưới */
+/* Ví dụ: nếu thẻ có chiều rộng là 100%, mà margin là 200px, thì sẽ bị đẩy xuống dưới */
+
+/* Border */
+/* Đường viền của thẻ */
+/* Border có thể có màu sắc, độ dày và kiểu đường viền */
+/* border: 1px solid red; sẽ có đường viền 1px, màu đỏ, kiểu đường viền là solid */
+/* border: 2px dashed blue; sẽ có đường viền 2px, màu xanh dương, kiểu đường viền là dashed */
+/* Có thể ghi chia ra 3 thuộc tính là border-width, border-style, border-color */
+/* Có thể chia ra thành 4 hướng: border-top, border-bottom, border-left, border-right */
+
+/* Padding */
+/* Khoảng cách bên trong của thẻ */
+/* Padding không thể âm */
+/* Giả sử 1 có 1 thẻ có thuộc tính width là 100%, nhưng lại nằm trong thẻ cha là <body>, <body> có padding mặc định là 8px */
+/* thì thẻ đó sẽ có chiều rộng là 100% - 8px - 8px = 100% - 16px*/
+/* Padding có thể tự động căn giữa thẻ, nếu thẻ cha có chiều rộng cố định */
+/* Padding-top, padding-bottom, padding-left, padding-right */
+/* Padding: auto; sẽ tự động căn giữa thẻ */
+/* Padding: 0 auto; sẽ tự động căn giữa thẻ theo chiều ngang */
+/* Padding: 10px auto; sẽ tự động căn giữa thẻ theo chiều ngang, và có khoảng cách 10px ở trên và dưới */
+/* Padding: 10px; sẽ mở rộng ra 10px ở cả 4 hướng trong thẻ */
+/* Padding: 10px 20px; sẽ mở rộng ra 10px ở trên và dưới, 20px ở trái và phải */
+/* Padding: 10px 20px 30px; sẽ mở rộng ra 10px ở trên, 20px ở trái và phải, 30px ở dưới */
+/* Padding: 10px 20px 30px 40px; sẽ mở rộng ra 10px ở trên, 20px ở phải, 30px ở dưới, 40px ở trái */
+
+/*Box-sizing*/
+/* Có 2 loại box-sizing là content-box và border-box */
+/* content-box: mặc định, sẽ tính kích thước của thẻ theo chiều rộng và chiều cao của nội dung trong thẻ */
+/* border-box: sẽ tính kích thước của thẻ theo chiều rộng và chiều cao của nội dung trong thẻ, cộng với padding và border */
+/* Ví dụ: nếu thẻ có chiều rộng là 100px, padding là 10px, border là 1px, thì kích thước của thẻ sẽ là 100px + 10px + 1px = 111px */
+/* border-box sẽ tính kích thước của thẻ theo chiều rộng và chiều cao của nội dung trong thẻ, cộng với padding và border */
+
+/* CSS Functions */
+/* 1. calc() */
+/* Tính toán các giá trị trong CSS */
+/* Ví dụ: calc(100% - 16px) */
+/* 2. var() */
+/* Khai báo biến trong CSS */
+/* 3. rgb("red", "greengreen", "blue") */
+/* Khai báo màu sắc trong CSS */
+/* rgb(255, 0, 0) là màu đỏ */
+/* rgb(0, 255, 0) là màu xanh lá cây */
+/* rgb(0, 0, 255) là màu xanh dương */
+/* rgb(255, 255, 0) là màu vàng */
+/* rgb(255, 0, 255) là màu tím */
+/* rgb(0, 255, 255) là màu cyan */
+/* rgb(0, 0, 0) là màu đen */
+/* rgb(255, 255, 255) là màu trắng */
+/* rgb(128, 128, 128) là màu xám */
+/* 4. rgba() */
+/* Khai báo màu sắc trong CSS với độ trong suốt */
+/* rgba(255, 0, 0, 0.5) là màu đỏ với độ trong suốt 50% */
+/* 5. attr() */
+/* Lấy giá trị của thuộc tính trong HTML */
+/* Ví dụ: attr(href) sẽ lấy giá trị của thuộc tính href trong thẻ a */
+/* 6. linear-gradient() */
+/* Tạo gradient trong CSS */
+/* background: linear-gradient(to right, red, blue) */
+/* Tạo gradient từ trái sang phải, từ màu đỏ sang màu xanh dương */
+
+/* CSS pseudo-class */
+/* 1. :hover */
+/* Khi di chuột vào thẻ, sẽ có hiệu ứng */
+/* Ví dụ: a:hover { color: red; } */
+/* 2. :active */
+/* Khi nhấn chuột vào thẻ, sẽ có hiệu ứng */
+/* Ví dụ: a:active { color: red; } */
+/* 3. :focus */
+/* Khi thẻ được chọn, sẽ có hiệu ứng */
+/* Ví dụ: input:focus { border: 1px solid red; } */
+/* 4. :first-child */
+/* Khi thẻ là con đầu tiên của thẻ cha, sẽ có hiệu ứng */
+/* Ví dụ: li:first-child { color: red; } */
+/* 5. :last-child */
+/* Khi thẻ là con cuối cùng của thẻ cha, sẽ có hiệu ứng */
+/* Ví dụ: li:last-child { color: red; } */
+/* 6. :nth-child(n) */
+/* Khi thẻ là con thứ n của thẻ cha, sẽ có hiệu ứng */
+/* Ví dụ: li:nth-child(2) { color: red; } */
+/* 7. :nth-last-child(n) */
+/* Khi thẻ là con thứ n từ dưới lên của thẻ cha, sẽ có hiệu ứng */
+/* Ví dụ: li:nth-last-child(2) { color: red; } */
+/* 8. :root */
+/* Khi thẻ là thẻ gốc của tài liệu, sẽ có hiệu ứng */
+/* Ví dụ: :root { --color: red; } */
+
+/* CSS pseudo-element */
+/* 1. ::before */
+/* Khi thẻ được tạo ra trước nội dung của thẻ, sẽ có hiệu ứng */
+/* Ví dụ: h1::before { content: "Hello"; } */
+/* 2. ::after */
+/* Khi thẻ được tạo ra sau nội dung của thẻ, sẽ có hiệu ứng */
+/* Ví dụ: h1::after { content: "Hello"; } */
+/* CHÚ Ý: content chỉ có thể dùng với ::before và ::after, và thêm dòng content vào mỗi ::before/::after đang tồn tại */
+/* CHÚ Ý: Mỗi thẻ chỉ có thể có 1 ::before và 1 ::after */
+/* 3. ::first-letter */
+/* Khi thẻ là chữ cái đầu tiên của thẻ, sẽ có hiệu ứng */
+/* Ví dụ: p::first-letter { font-size: 2em; } */
+/* 4. ::first-line */
+/* Khi thẻ là dòng đầu tiên của thẻ, sẽ có hiệu ứng */
+/* Ví dụ: p::first-line { font-size: 2em; } */
+/* 5. ::selection */
+/* Khi thẻ được chọn, sẽ có hiệu ứng */
+/* Ví dụ: ::selection { background: red; } */
+
+/* Có 2 cách gọi biến, Global và Local */
+/* Global */
+:root {
+  --text--color: red;
+}
+/* Local */
+.test {
+  --text--color: blue;
+  /* Khai báo biến: var("tên biến") */
+  color: var(--text--color);
+}
+
 /* "*" là selector chọn tất cả các thẻ trong HTML */
 * {
   display: flex;

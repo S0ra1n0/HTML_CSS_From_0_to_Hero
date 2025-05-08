@@ -1,5 +1,10 @@
 /* This is a comment in CSS */
 
+/* "*" là selector chọn tất cả các thẻ trong HTML */
+* {
+  display: flex;
+}
+
 /* Với id, ta dùng "#" để gọi */
 #first_heading {
   color: red;
@@ -11,10 +16,26 @@
 }
 
 /*CSS selctor with class*/
+/* .1.2 -> chọn tất cả các thẻ có class là 1 và 2*/
 .heading.title {
   color: green;
 }
-
+/* .1 .2 -> chọn tất cả các thẻ có class là 1 và 2, trong đó 2 là con của 1*/
 .box .heading {
   color: rgba(193, 169, 28, 0.546);
+}
+
+/* Khi gọi .a > .heading, .heading là con trực tiếp của .a sẽ được gọi*/
+.a > .heading {
+  color: purple;
+}
+
+/* Khi gọi .near + .near, .near đứng sau sẽ được gọi*/
+.near + .near {
+  color: orange;
+}
+
+/* Khi gọi .front ~ .behind, các .behind sẽ được gọi khi chỉ cần có ít nhất 1 .front đứng trước*/
+.front ~ .behind {
+  color: rgb(248, 2, 174);
 }

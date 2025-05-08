@@ -24,5 +24,34 @@
     <div class="box">
       <h2 class="heading">CSS selector</h2>
     </div>
+
+    <!-- Khi gọi .a > .heading bên CSS, .heading là con trực tiếp của .a sẽ được gọi, .heading bên trong div kia không được gọi -->
+    <div class="a">
+      <h2 class="heading">CSS selector</h2>
+      <div>
+        <h2 class="heading">CSS selector</h2>
+      </div>
+    </div>
+
+    <!-- Khi gọi .near + .near bên CSS, near thứ 2 (đứng sau) sẽ được gọi-->
+
+    <!-- Không được gọi -->
+    <h2 class="near">CSS selector</h2>
+
+    <!-- Được gọi -->
+    <h2 class="near">CSS selector</h2>
+    <h2 class="near">CSS selector</h2>
+
+    <!-- Khi gọi .front ~ .behind bên CSS, các .behind sẽ được gọi khi chỉ cần có ít nhất 1 .front đứng trước-->
+
+    <!-- Không được gọi -->
+    <h2 class="behind">CSS selector</h2>
+    <h2 class="behind">CSS selector</h2>
+
+    <h3 class="front">CSS selector</h3>
+
+    <!-- Được gọigọi -->
+    <h2 class="behind">CSS selector</h2>
+    <h2 class="behind">CSS selector</h2>
   </body>
 </html>

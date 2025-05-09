@@ -200,3 +200,23 @@
 .front ~ .behind {
   color: rgb(248, 2, 174);
 }
+
+/* background-image */
+/* Tạo hình nền cho thẻ */
+.image_back {
+  /*background-image 
+  background-image: 
+  url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg"),
+  url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg");
+
+  /* [background-repeat: no-repeat] sẽ tránh việc ảnh bị lặp lại*/
+  background-repeat: no-repeat;
+
+  /* Giá trị đầu tiên là chiều ngang, giá trị thứ 2 là chiều dọc*/
+  background-size: 100% auto;
+  /* background-size: cover; sẽ tự động điều chỉnh kích thước ảnh để vừa với thẻ*/
+
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}

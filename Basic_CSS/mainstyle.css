@@ -204,10 +204,9 @@
 /* background-image */
 /* Tạo hình nền cho thẻ */
 .image_back {
-  /*background-image 
-  background-image: 
-  url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg"),
-  url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg");
+  /*background-image, link ở trên sẽ đè lên link ở dưới*/
+  background-image: url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg"),
+    url("https://i.pinimg.com/564x/2c/0f/4b/2c0f4b1a3d5e6a7d8e9f3a1b5e5c5e5c.jpg");
 
   /* [background-repeat: no-repeat] sẽ tránh việc ảnh bị lặp lại*/
   background-repeat: no-repeat;
@@ -215,8 +214,30 @@
   /* Giá trị đầu tiên là chiều ngang, giá trị thứ 2 là chiều dọc*/
   background-size: 100% auto;
   /* background-size: cover; sẽ tự động điều chỉnh kích thước ảnh để vừa với thẻ*/
+  /* background-size: contain; sẽ tự động điều chỉnh kích thước ảnh để vừa với thẻ, nhưng không bị cắt*/
 
   background-position: center;
   width: 100%;
   height: 100vh;
+
+  background-origin: border-box;
+  /* background-origin: content-box; sẽ tính kích thước của ảnh theo chiều rộng và chiều cao của nội dung trong thẻ */
+  /* background-origin: border-box; sẽ tính kích thước của ảnh theo chiều rộng và chiều cao của nội dung trong thẻ, cộng với border */
+  /* background-origin: padding-box; sẽ tính kích thước của ảnh theo chiều rộng và chiều cao của nội dung trong thẻ, cộng với padding */
+
+  background-position: 10px 20px;
+  /* background-position: 10px 20px; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên */
+}
+
+.testing_position {
+  position: absolute;
+  /* position: absolute; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên, và sẽ không bị cuộn khi cuộn trang */
+  /* position: relative; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên */
+  /* position: fixed; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên, và sẽ không bị cuộn khi cuộn trang */
+  /* position: sticky; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên, và sẽ bị cuộn khi cuộn trang */
+  /* position: static; sẽ đặt vị trí của ảnh ở 10px từ trái và 20px từ trên, và sẽ không bị cuộn khi cuộn trang */
+  top: 10px;
+  left: 20px;
+  right: 30px;
+  bottom: 40px;
 }
